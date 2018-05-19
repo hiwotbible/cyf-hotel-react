@@ -1,6 +1,10 @@
 import React from 'react';
+//import Button from "react";
+const Button = () => (
+  <button className="btn btn-primary fn-submit-name">Search IDs</button>
+)
 
-const Search = props => (
+const Search = () => (
   <div className="search">
     <div className="page-header">
       <h4 className="text-left">Search Bookings</h4>
@@ -11,7 +15,7 @@ const Search = props => (
           <label htmlFor="customerId">Customer Id</label>
           <div className="search-row">
             <input type="text" id="customerId" className="form-control" placeholder="Customer Id" />
-            <button className="btn btn-primary fn-submit-name">Search IDs</button>
+            <Button />
           </div>
         </div>
       </div>
@@ -20,3 +24,4 @@ const Search = props => (
 );
 
 export default Search;
+
