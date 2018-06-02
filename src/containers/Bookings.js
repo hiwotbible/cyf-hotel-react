@@ -7,7 +7,7 @@ import NameSearch from "../components/NameSearch.js";
 // import BookingsMessage from "./components/Bookings.js"
 
 // import Results from '../components/Results.js';
-// import FakeBookings from '../data/fakeBookings.json';
+import FakeBookings from '../data/fakeBookings.json';
 
 export default class Bookings extends Component {
   search = () => {
@@ -15,15 +15,16 @@ export default class Bookings extends Component {
   };
 
   render() {
+    console.log(FakeBookings)
     return (
 
 
       <div className="App-content">
         <div className="container">
           <p> {"There are bookings available for today's  " + new Date().toLocaleDateString()} </p>
-          <Results />
+          
           {/* <Logo /> */}
-
+<Results results={FakeBookings}/>
           <Search search={this.search} />
           <NameSearch search={this.search} />
           {/* <Results results={this.state.results} /> */}
